@@ -1,5 +1,7 @@
 import { Container,Content, Table } from "./styles";
-
+import {IoEyeSharp} from 'react-icons/io5'
+import {FaPencilAlt} from 'react-icons/fa'
+import {FaTrashAlt} from 'react-icons/fa'
 
 export function ContactsTable(){
   return (
@@ -26,7 +28,11 @@ export function ContactsTable(){
               <td>064 99346-9090</td>
               <td>Santa Helena de Goiás</td>
               <td>GO</td>
-              <td>AGUARDE..</td>
+              <td className="actionStyleButton">
+                <button> <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
+                <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
+                <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
+              </td>
             </tr>
 
             <tr>
@@ -34,7 +40,11 @@ export function ContactsTable(){
               <td>064 99346-9090</td>
               <td>Santa Helena de Goiás</td>
               <td>GO</td>
-              <td>AGUARDE..</td>
+              <td>
+              <button> <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
+                <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
+                <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
+              </td>
             </tr>
 
             <tr>
@@ -42,7 +52,11 @@ export function ContactsTable(){
               <td>064 99346-9090</td>
               <td>Santa Helena de Goiás</td>
               <td>GO</td>
-              <td>AGUARDE..</td>
+              <td>
+              <button> <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
+                <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
+                <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
+              </td>
             </tr>
           </tbody>
         </table>

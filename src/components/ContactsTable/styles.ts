@@ -53,6 +53,18 @@ export const Table = styled.table`
       color: var(--text-title);
     }
 
+    .actionStyleButton{
+     
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .actionStyleButton button{
+      border: 0;
+      background: transparent;
+    }
+
   }
 
 `
