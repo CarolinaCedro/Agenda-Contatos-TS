@@ -3,7 +3,13 @@ import {IoEyeSharp} from 'react-icons/io5'
 import {FaPencilAlt} from 'react-icons/fa'
 import {FaTrashAlt} from 'react-icons/fa'
 
-export function ContactsTable(){
+interface contactsTableProps{
+  onViewContact:()=>void;
+  onOpenEdictContact:()=>void;
+  onOpenDeleteContact:()=>void;
+}
+
+export function ContactsTable({onOpenEdictContact,onOpenDeleteContact,onViewContact}:contactsTableProps){
   return (
     <Container>
       <Content>
@@ -29,10 +35,25 @@ export function ContactsTable(){
               <td>Santa Helena de Goiás</td>
               <td>GO</td>
               <td className="actionStyleButton">
+                <button onClick={onViewContact}> 
+                  <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
+                <button onClick={onOpenEdictContact}>
+                  <FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
+                <button onClick={onOpenDeleteContact}>
+                  <FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
+              </td>
+            </tr>
+
+            <tr >
+              <td>Ana Carolina Cedro</td>
+              <td>064 99346-9090</td>
+              <td>Santa Helena de Goiás</td>
+              <td>GO</td>
+              <td className="actionStyleButton">
                 <button> <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
-                <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
-                <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
-              </td>
+                  <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
+                  <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
+                </td>
             </tr>
 
             <tr>
@@ -40,23 +61,11 @@ export function ContactsTable(){
               <td>064 99346-9090</td>
               <td>Santa Helena de Goiás</td>
               <td>GO</td>
-              <td>
-              <button> <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
-                <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
-                <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
-              </td>
-            </tr>
-
-            <tr>
-              <td>Ana Carolina Cedro</td>
-              <td>064 99346-9090</td>
-              <td>Santa Helena de Goiás</td>
-              <td>GO</td>
-              <td>
-              <button> <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
-                <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
-                <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
-              </td>
+              <td className="actionStyleButton">
+                <button> <IoEyeSharp  fontSize={20} color={'#4831D4'}/></button>
+                  <button><FaPencilAlt fontSize={15} color={'#4831D4'}/></button>
+                  <button><FaTrashAlt fontSize={15} color={'#4831D4'}/></button>
+                </td>
             </tr>
           </tbody>
         </table>
